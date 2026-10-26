@@ -5,6 +5,7 @@ import joblib
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
+    accuracy_score,
     confusion_matrix,
     classification_report
 )
@@ -36,7 +37,7 @@ y_pred = model.predict(X_test)
 
 print("\n===== Confusion Matrix =====")
 print(confusion_matrix(y_test, y_pred))
-
+print("Accuracy Score:", accuracy_score(y_test, y_pred))
 print("\n===== Classification Report =====")
 print(classification_report(y_test, y_pred, zero_division=0))
 
