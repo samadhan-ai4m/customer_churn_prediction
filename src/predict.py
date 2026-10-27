@@ -1,6 +1,7 @@
 import joblib
 import pandas as pd
 
+
 model = joblib.load("models/lightgbm_pipeline.pkl")
 
 
